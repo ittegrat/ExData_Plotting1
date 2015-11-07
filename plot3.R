@@ -1,14 +1,13 @@
 # Plot 3: sub-meterings timeline
 #-----------------------------------------------------------
 
-write2png <- TRUE
 imgfile <- "plot3.png"
 
 source("getdata.R")
 df <- get.data()
 
 # Open PNG device
-if (write2png) png(imgfile, width=480, height=480)
+png(imgfile, width=480, height=480)
 
 # Plot commands
 plot(
@@ -39,4 +38,4 @@ legend(
 )
 
 # Close PNG device
-if (write2png) dev.off()
+dev.off()

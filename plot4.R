@@ -1,14 +1,13 @@
 # Plot 4: histogram of global active power
 #-----------------------------------------------------------
 
-write2png <- TRUE
 imgfile <- "plot4.png"
 
 source("getdata.R")
 df <- get.data()
 
 # Open PNG device
-if (write2png) png(imgfile, width=480, height=480)
+png(imgfile, width=480, height=480)
 
 # Plot commands
 par(mfrow=c(2,2))
@@ -52,4 +51,4 @@ with(df,
 )
 
 # Close PNG device
-if (write2png) dev.off()
+dev.off()
